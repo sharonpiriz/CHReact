@@ -1,16 +1,16 @@
-import { Link } from "react-router-dom";
+import CardProduct from "../CardProduct/CardProduct";
 
 const Item = ({ product }) => {
   return (
-    <div>
-      <h2>{product.name}</h2>
-      <img src={product.img} />
-      <div>
-        <p>Precio: USD {product.price}</p>
-        <p>{product.description}</p>
-        <Link to={`/item/${product.id}`}>Ver detalle</Link>
-      </div>
-    </div>
+    <>
+      <CardProduct
+        img={product.img}
+        title={product.name}
+        price={product.price}
+        currency={"USD"}
+        productId={product.id}
+      />
+    </>
   );
 };
 
