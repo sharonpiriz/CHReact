@@ -32,13 +32,34 @@ export const CartProvider = ({ children }) => {
     setCarrito([]);
   };
 
+  const subTotal = () => {
+    return Math.round(
+      carrito.reduce(
+        (acc, producto) => acc + producto.price * producto.cantidad,
+        0
+      )
+    );
+  };
+
+  const totalPrice = () => {
+    const subtotalPrice = subTotal();
+    return Math.round(subtotalPrice * 1.1);
+  };
+
   useEffect(() => {
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }, [carrito]);
 
   return (
     <CartContext.Provider
-      value={{ carrito, handleAgregar, cantCarrito, handleVaciar }}
+      value={{
+        carrito,
+        handleAgregar,
+        cantCarrito,
+        handleVaciar,
+        subTotal,
+        totalPrice,
+      }}
     >
       {children}
     </CartContext.Provider>

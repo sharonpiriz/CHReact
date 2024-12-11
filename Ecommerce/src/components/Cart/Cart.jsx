@@ -1,21 +1,11 @@
 import { useContext } from "react";
 import CartItemList from "../CartItemList/CartItemList";
 import { CartContext } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
-  const { carrito, handleVaciar } = useContext(CartContext);
-
-  const subTotal = () => {
-    return carrito.reduce(
-      (acc, producto) => acc + producto.price * producto.cantidad,
-      0
-    );
-  };
-
-  const totalPrice = () => {
-    const subtotalPrice = subTotal();
-    return subtotalPrice * 1.1;
-  };
+  const { carrito, handleVaciar, subTotal, totalPrice } =
+    useContext(CartContext);
 
   return (
     <div className="h-screen pt-20">
@@ -52,9 +42,11 @@ const Cart = () => {
                   </p>
                 </div>
               </div>
-              <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
-                Check out
-              </button>
+              <Link to={`/checkout`}>
+                <button className="mt-6 w-full rounded-md bg-blue-500 py-1.5 font-medium text-blue-50 hover:bg-blue-600">
+                  Check out
+                </button>
+              </Link>
             </div>
           </>
         ) : (

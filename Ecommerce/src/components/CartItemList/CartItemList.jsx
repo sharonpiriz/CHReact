@@ -4,7 +4,6 @@ import { CartContext } from "../../context/CartContext";
 
 const CartItemList = () => {
   const { carrito } = useContext(CartContext);
-  console.log(carrito);
   return (
     <>
       {carrito.map((product) => (
