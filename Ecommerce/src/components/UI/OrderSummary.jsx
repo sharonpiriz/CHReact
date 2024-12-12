@@ -34,7 +34,7 @@ const OrderSummary = () => {
                     <span className="text-gray-400">
                       Cantidad: {producto.cantidad}
                     </span>
-                    <span className="text-pink-400 font-semibold inline-block">
+                    <span className="text-gray-600 font-semibold inline-block">
                       USD {producto.price}
                     </span>
                   </div>
@@ -46,13 +46,13 @@ const OrderSummary = () => {
         <div className="px-8 border-b">
           <div className="flex justify-between py-4 text-gray-600">
             <span>Subtotal</span>
-            <span className="font-semibold text-pink-500">
+            <span className="font-semibold text-gray-600">
               USD {subTotal()}
             </span>
           </div>
           <div className="flex justify-between py-4 text-gray-600">
-            <span>Envio</span>
-            <span className="font-semibold text-pink-500">8%</span>
+            <span>Envío</span>
+            <span className="font-semibold text-gray-600">8%</span>
           </div>
         </div>
         <div className="font-semibold text-xl px-8 flex justify-between py-8 text-gray-600">

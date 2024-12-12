@@ -101,7 +101,7 @@ const Checkout = () => {
               <div className="text-sm font-medium ml-3">Checkout</div>
             </div>
             <div className="text-sm tracking-wide text-gray-500 mt-4 sm:mt-0 sm:ml-4">
-              Complete su informacion a continuacion
+              Complete su información a continuación
             </div>
             <div className="absolute sm:relative sm:top-auto sm:right-auto ml-auto right-4 top-4 text-gray-400 hover:text-gray-800 cursor-pointer">
               <svg
@@ -127,11 +127,11 @@ const Checkout = () => {
             <div className="rounded-md">
               <section>
                 <h2 className="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2">
-                  Informacion de pago
+                  Información de pago
                 </h2>
                 <fieldset className="mb-3 bg-white shadow-lg rounded text-gray-600">
                   <InputForm
-                    text={"Numero de tarjeta"}
+                    text={"Número de tarjeta"}
                     name={"numeroTarjeta"}
                     placeholder={"xxx xxx xxx 1234"}
                     type={"number"}
@@ -158,7 +158,7 @@ const Checkout = () => {
             </div>
             <button
               type="submit"
-              className="submit-button px-4 py-3 rounded-full bg-pink-400 text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
+              className="submit-button px-4 py-3 rounded-full bg-blue-500 hover:bg-blue-600 text-white focus:ring focus:outline-none w-full text-xl font-semibold transition-colors"
             >
               Pagar USD {totalPrice()}
             </button>

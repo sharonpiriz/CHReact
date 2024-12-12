@@ -4,7 +4,7 @@ const Form = ({ register }) => {
   return (
     <>
       <h2 className="uppercase tracking-wide text-lg font-semibold text-gray-700 my-2">
-        Informacion de envio y cobros
+        Información de envío y cobros
       </h2>
       <fieldset className="mb-3 bg-white shadow-lg rounded text-gray-600">
         <InputForm
@@ -24,7 +24,7 @@ const Form = ({ register }) => {
         />
 
         <InputForm
-          text={"Direccion"}
+          text={"Dirección"}
           name={"direccion"}
           type={"text"}
           placeholder={"Mario Cassinoni"}
@@ -48,7 +48,7 @@ const Form = ({ register }) => {
         />
 
         <InputForm
-          text={"Codigo Postal"}
+          text={"Código Postal"}
           name={"codigoPostal"}
           type={"number"}
           placeholder={"15100"}
@@ -56,7 +56,7 @@ const Form = ({ register }) => {
         />
 
         <InputForm
-          text={"Pais"}
+          text={"País"}
           name={"pais"}
           type={"text"}
           placeholder={"Uruguay"}

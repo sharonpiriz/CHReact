@@ -30,7 +30,7 @@ const Cart = () => {
                 <p className="text-gray-700">USD {subTotal()}</p>
               </div>
               <div className="flex justify-between">
-                <p className="text-gray-700">Envio</p>
+                <p className="text-gray-700">Envío</p>
                 <p className="text-gray-700">8%</p>
               </div>
               <hr className="my-4" />

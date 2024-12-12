@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import ItemList from "../ItemList/ItemList.jsx";
 import { query, collection, getDocs, where } from "firebase/firestore";
 import { db } from "../././../firebase/config.js";
+import Loader from "../UI/Loader.jsx";
 
 const ItemListContainer = () => {
   const [products, setProducts] = useState([]);
@@ -23,10 +24,12 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div>
-      <div>
+    <div className="min-h-[calc(100vh-100px)] flex items-center">
+      {products?.length > 0 ?
         <ItemList products={products} />
-      </div>
+        :
+        <Loader />
+      }
     </div>
   );
 };
